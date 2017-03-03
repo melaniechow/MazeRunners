@@ -1,3 +1,8 @@
+/*Team MazeRunners - Tim Wang, Melanie Chow, Truc Dao
+  APCS2 pd4
+  HW12 -- Thinkers of the Corn
+  2017-03-06*/
+
 /***
  * SKEELTON for class 
  * MazeSolver
