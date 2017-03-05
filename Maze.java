@@ -116,8 +116,9 @@ class MazeSolver
 	delay(50); //slow it down enough to be followable
 
 	//primary base case
-	if ( /* YOUR AMAZEING CODE HERE */ ) {
-	    /* YOUR AMAZEING CODE HERE */
+	//solution has been found
+	if ( solved ) {
+	    System.exit(0);
 	}
 	//other base case(s)...
 	else if ( /* YOUR AMAZEING CODE HERE */ ) {
