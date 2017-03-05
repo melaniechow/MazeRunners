@@ -113,27 +113,38 @@ class MazeSolver
      *********************************************/
     public void solve( int x, int y ) {
 
-	delay(50); //slow it down enough to be followable
-
+	delay(200); //slow it down enough to be followable
 	//primary base case
+<<<<<<< HEAD
+=======
 	//solution has been found
+>>>>>>> 53f53189bc4d0e571598cac1842bd4bfc2a56032
 	if ( solved ) {
 	    System.exit(0);
 	}
 	//other base case(s)...
-	else if ( /* YOUR AMAZEING CODE HERE */ ) {
-	    /* YOUR AMAZEING CODE HERE */
+	else if ( x >= maze.length || y >= maze[0].length  ) {
+	    
 	}
-	else if ( /* YOUR AMAZEING CODE HERE */ ) {
-	    /* YOUR AMAZEING CODE HERE */
+	else if ( maze[x][y] == EXIT  ) {
+	    maze[x][y] = HERO;
+	    solved = true;
+	    System.out.println(this);
 	}
-	else if ( /* YOUR AMAZEING CODE HERE */ ) {
-	    /* YOUR AMAZEING CODE HERE */
+	else if ( !onPath(x,y) ) {
+	    
 	}
 	//recursive reduction
 	else {
-	    /* YOUR AMAZEING CODE HERE */
+	    maze[x][y] = HERO;
+	    solve(x+1,y);
+	    solve(x,y+1);
+	    solve(x-1,y);
+	    solve(x,y-1);
+
+	    maze[x][y] = VISITED_PATH;
 	}
+	System.out.println(this);
     }
 
     //accessor method to help with randomized drop-in location
@@ -158,9 +169,9 @@ public class Maze
 
 	    //drop hero into the maze (coords must be on path)
 	    //comment next line out when ready to randomize startpos
-	    ms.solve( 4, 3 ); 
+	    // ms.solve( 4, 3 ); 
 
-	    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	    
 	    //drop our hero into maze at random location on path
 	    //the Tim Diep way:
 	    Random r = new Random();
@@ -170,9 +181,9 @@ public class Maze
 		startX = r.nextInt( 80 );
 		startY = r.nextInt( 25 );
 	    }
-
+	    System.out.println(startX);
 	    ms.solve( startX, startY );
-	    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 	} catch( Exception e ) { 
 	    System.out.println( "Error reading input file." );
 	    System.out.println( "Usage: java Maze <filename>" ); 
