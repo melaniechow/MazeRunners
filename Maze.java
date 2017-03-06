@@ -115,10 +115,10 @@ class MazeSolver
 
 	delay(200); //slow it down enough to be followable
 	//primary base case
-<<<<<<< HEAD
-=======
+	//<<<<<<< HEAD
+	//=======
 	//solution has been found
->>>>>>> 53f53189bc4d0e571598cac1842bd4bfc2a56032
+	//>>>>>>> 53f53189bc4d0e571598cac1842bd4bfc2a56032
 	if ( solved ) {
 	    System.exit(0);
 	}
