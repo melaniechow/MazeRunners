@@ -14,7 +14,7 @@
  * (mazefile is ASCII representation of maze, using symbols below)
  * 
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ *  The hero is placed on one of the points onpath. First the path point is marked with the hero's mark. Then the hero has four options to move forward: north, south, east and west. Using recursion the algo branches out the 4 possibilities. The algo then checks if any of the coordinates leads the hero offpath. If true, then that branch stops there. If the hero stays onpath, however, the algo repeats. If the algo exhausts all 4 possibilites of that point, then it marks the point with visited_path marker and goes back.
  ***/
 
 //enable file I/O
@@ -181,7 +181,7 @@ public class Maze
 		startX = r.nextInt( 80 );
 		startY = r.nextInt( 25 );
 	    }
-	    System.out.println(startX);
+
 	    ms.solve( startX, startY );
 
 	} catch( Exception e ) { 
